@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:tabMode="fixed"
+                        app:tabGravity="fill"/>
+                </android.support.design.widget.AppBarLayout>
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                <LinearLayout
+                    android:id="@+id/linearto"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#3F51B5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ivmusic"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="45dp"
+                        android:layout_margin="2dp"/>
+                    <TextView
+                        android:id="@+id/namemusic"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:text="dm"
+                        android:textSize="20sp"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:id="@+id/linearchange"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="4"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/back"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/lui"/>
+                        <ImageView
+                            android:id="@+id/play"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/play"/>
+                        <ImageView
+                            android:id="@+id/next"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/next" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:background="@android:color/darker_gray">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <ListView
+                android:id="@+id/listview_navi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#203012"
+                android:dividerHeight="2dp">
+            </ListView>
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
+
