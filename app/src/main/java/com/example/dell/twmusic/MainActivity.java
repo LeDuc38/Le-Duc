@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ListView listView_navigation;
     private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
 
     @Override
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        drawerToggle=new ActionBarDrawerToggle(this,drawerLayout,,0,0){
+        drawerToggle=new ActionBarDrawerToggle(this,drawerLayout,null,0,0){
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
