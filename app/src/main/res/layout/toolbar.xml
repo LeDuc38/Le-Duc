@@ -3,17 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="56dp"
     android:id="@+id/toolbar"
-    android:background="#4250A7">
+    android:background="#072cfa">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:id="@+id/tvtoolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="35sp"
+            android:text="Màn hình chính"
+            android:textSize="30sp"
+            android:textColor="#f50ce2"
             android:layout_centerVertical="true"/>
         <ImageView
+            android:id="@+id/ivupload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/upload"
